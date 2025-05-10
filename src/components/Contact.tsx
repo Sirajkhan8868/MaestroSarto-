@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Mail } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,22 +13,38 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    toast.success("Thank you for your message. We'll be in touch soon!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+    
+    try {
+      // This would typically be a call to a backend API or service
+      // For now, we'll simulate a successful email send
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+      
+      console.log("Email sent with data:", formData);
+      toast.success("Your message has been sent! We'll be in touch soon.");
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("There was an error sending your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -162,8 +179,19 @@ const Contact = () => {
                     className="w-full border-gray-300 focus:border-tailor-gold focus:ring-tailor-gold"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-tailor-dark hover:bg-black text-white py-6">
-                  SEND MESSAGE
+                <Button 
+                  type="submit" 
+                  className="w-full bg-tailor-dark hover:bg-black text-white py-6 flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>SENDING MESSAGE...</>
+                  ) : (
+                    <>
+                      <Mail size={18} />
+                      SEND MESSAGE
+                    </>
+                  )}
                 </Button>
               </div>
             </form>
