@@ -5,12 +5,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center pt-16"
-      style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}
+      className="relative min-h-screen flex items-center pt-16 bg-tailor-dark"
     >
       <div className="container mx-auto px-4 py-20 text-white">
         <div className="max-w-3xl animate-fade-in">
