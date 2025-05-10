@@ -7,7 +7,7 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center pt-16"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511664069658-b38b8d1ec34d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80')",
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}
@@ -22,11 +22,8 @@ const Hero = () => {
             Meticulously handcrafted suits and garments tailored to your exact measurements and personal style. Experience Italian craftsmanship and the perfect fit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-tailor-gold hover:bg-amber-600 text-black font-medium px-8 py-6">
-              BOOK A CONSULTATION
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6">
-              EXPLORE OUR COLLECTION
+            <Button className="bg-black hover:bg-gray-800 text-white font-medium px-8 py-6">
+              EXPLORE OUR SERVICES
             </Button>
           </div>
         </div>

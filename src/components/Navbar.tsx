@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <a href="#home" className="text-sm font-medium hover:text-tailor-gold transition-colors">
               HOME
             </a>
@@ -45,9 +45,25 @@ const Navbar: React.FC = () => {
             </Button>
           </nav>
 
+          {/* Medium Device Navigation */}
+          <nav className="hidden md:flex lg:hidden items-center space-x-5">
+            <a href="#home" className="text-sm font-medium hover:text-tailor-gold transition-colors">
+              HOME
+            </a>
+            <a href="#about" className="text-sm font-medium hover:text-tailor-gold transition-colors">
+              ABOUT
+            </a>
+            <a href="#services" className="text-sm font-medium hover:text-tailor-gold transition-colors">
+              SERVICES
+            </a>
+            <a href="#contact" className="text-sm font-medium hover:text-tailor-gold transition-colors">
+              CONTACT
+            </a>
+          </nav>
+
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-tailor-dark p-2"
+            className="lg:hidden text-tailor-dark p-2"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
