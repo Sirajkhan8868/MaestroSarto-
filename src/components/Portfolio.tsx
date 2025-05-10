@@ -10,7 +10,7 @@ const portfolioCategories = [
         id: 1,
         title: "Business Suit",
         description: "Classic navy business suit with peak lapels",
-        imageSrc: "https://images.unsplash.com/photo-1594938298623-c8506befca82?auto=format&fit=crop&q=80",
+        imageSrc: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&q=80",
       },
       {
         id: 2,
