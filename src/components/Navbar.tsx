@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <a href="/" className="font-serif text-2xl font-bold tracking-tight">
-              MAESTRO<span className="text-tailor-gold">SARTO</span>
+              MAESTRO<span className="text-tailor-gold"> SARTO</span>
             </a>
           </div>
 

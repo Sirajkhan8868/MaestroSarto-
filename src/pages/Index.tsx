@@ -8,6 +8,10 @@ import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import FlipCardsSection from '@/components/flip-cards-section';
+import FabricCollection from '@/components/Fabric-collection';
+import TailoredsuitCollection from '@/components/Tailoredsuit';
+import Customer from '@/components/Customer';
 
 const Index = () => {
   return (
@@ -15,9 +19,14 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
+      <Customer />
       <Services />
       <Portfolio />
+      <FabricCollection />
+      <FlipCardsSection />
+      <TailoredsuitCollection />
       <Testimonials />
+
       <Contact />
       <Footer />
     </div>

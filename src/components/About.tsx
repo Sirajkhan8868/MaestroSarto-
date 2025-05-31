@@ -1,53 +1,48 @@
-
-import { Button } from "@/components/ui/button";
+import suitimage from "../assets/images/suitimage.jpg";
+import womansuit1 from "../assets/images/womensuit1.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="section bg-white">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h2 className="section-title">About <span className="text-tailor-gold">Tailor Me</span></h2>
-            <p className="text-tailor-gray mb-6">
-              Founded in 2005, Tailor Me has built a reputation for exceptional craftsmanship and attention to detail. 
-              Our master tailors bring decades of experience to create garments that perfectly match your body shape and style preferences.
-            </p>
-            <p className="text-tailor-gray mb-6">
-              We believe that every gentleman deserves a perfectly fitted suit that enhances confidence and makes a statement. 
-              Our bespoke approach ensures that each garment is as unique as the individual wearing it.
-            </p>
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div>
-                <h3 className="font-serif text-4xl font-bold text-tailor-gold mb-2">18+</h3>
-                <p className="text-sm text-tailor-gray">Years of Experience</p>
+    <section id="about" className="section bg-white py-16">
+      <div className="container mx-auto px-4">
+        {/* Heading */}
+        <h6 className="text-center text-3xl font-semibold text-gray-800 mb-10 leading-snug">
+          FIND YOUR PERFECT FIT <br />
+          BESPOKE TAILORING IN DUBAI
+        </h6>
+
+        {/* Image Section */}
+        <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
+          {/* Left Image */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8  py-8 rounded-md">
+
+            {/* Left Image */}
+            <div className="text-center bg-gray-100">
+              <div className="relative w-[300px] sm:w-[500px] md:w-[750px] h-[500px] md:h-[750px] rounded-lg overflow-hidden shadow-md mx-auto">
+                <img
+                  src={suitimage}
+                  alt="Tailor measuring a client"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div>
-                <h3 className="font-serif text-4xl font-bold text-tailor-gold mb-2">5,000+</h3>
-                <p className="text-sm text-tailor-gray">Satisfied Clients</p>
-              </div>
-              <div>
-                <h3 className="font-serif text-4xl font-bold text-tailor-gold mb-2">12</h3>
-                <p className="text-sm text-tailor-gray">Master Tailors</p>
-              </div>
-              <div>
-                <h3 className="font-serif text-4xl font-bold text-tailor-gold mb-2">100%</h3>
-                <p className="text-sm text-tailor-gray">Satisfaction Guarantee</p>
-              </div>
+              <h1 className="text-xl font-semibold text-gray-800 my-5">Men Custom Suit</h1>
             </div>
-            <Button className="bg-tailor-dark hover:bg-black text-white px-8 py-6">
-              LEARN MORE
-            </Button>
-          </div>
-          <div className="order-1 md:order-2 relative">
-            <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&q=80" 
-                alt="Tailor measuring a client" 
-                className="w-full h-auto"
-              />
+
+            {/* Right Image */}
+            <div className="text-center bg-gray-100">
+              <div className="relative w-[300px] sm:w-[500px] md:w-[750px] h-[500px] md:h-[750px] rounded-lg overflow-hidden shadow-md mx-auto">
+                <img
+                  src={womansuit1}
+                  alt="Woman in tailored suit"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h1 className="text-xl font-semibold text-gray-800 my-5">Woman Custom Suit</h1>
             </div>
-            <div className="absolute w-full h-full bg-tailor-gold/20 rounded-lg -z-0 top-6 left-6"></div>
+
           </div>
+
+
         </div>
       </div>
     </section>
