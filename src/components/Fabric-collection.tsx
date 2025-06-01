@@ -13,7 +13,7 @@ export default function FabricCollection() {
                 {/* Description */}
                 <p className="text-center text-gray-700 text-lg leading-relaxed max-w-6xl mx-auto mb-20">
                     We exclusively offer some of the finest and internationally renowned fabric houses from Switzerland, UK and
-                    Italy under one roof. House of Tailors is the name to reckon with. We strive hard to exceed our customer's
+                    Italy under one roof. Maestro Sarto is the name to reckon with. We strive hard to exceed our customer's
                     expectations and this is possible only because we pay close attention to the texture, versatility, and beauty
                     of the fabrics.
                 </p>

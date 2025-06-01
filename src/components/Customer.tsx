@@ -8,7 +8,7 @@ const Customer = () => {
                 {/* Heading */}
                 <div className="text-center">
 
-                    <h6 className="text-center text-3xl font-semibold text-gray-800 mb-10 leading-snug">
+                    <h6 className="text-center text-3xl font-medium text-gray-800 mb-4 leading-snug">
                         WHAT WE OFFER TO OUR CUSTOMERS
                     </h6>
                     <p>We believe custom clothing experiences should be convenient and affordable to customers. Our team of stylist, designers & talented tailors worked together to get you the best experience in getting your custom clothing online.
@@ -56,7 +56,6 @@ const Customer = () => {
                             </div>
                             <h1 className="text-xl font-semibold text-gray-800 my-5">Woman Custom Suit</h1>
                         </div>
-
                     </div>
 
 

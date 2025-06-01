@@ -66,7 +66,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-medium mb-1">Phone</h3>
-                  <p className="text-tailor-gray">+27 21 123 4567</p>
+                  <p className="text-tailor-gray">074 577 4777</p>
                   <p className="text-tailor-gray">Monday - Friday: 9am - 6pm</p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-medium mb-1">Email</h3>
-                  <p className="text-tailor-gray">info@tailorme.co.za</p>
+                  <p className="text-tailor-gray">Maestrosarto79@gmail.com</p>
                   <p className="text-tailor-gray">We aim to respond within 24 hours</p>
                 </div>
               </div>
@@ -94,8 +94,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg font-medium mb-1">Location</h3>
-                  <p className="text-tailor-gray">123 Main Street, Cape Town</p>
-                  <p className="text-tailor-gray">South Africa, 8001</p>
+                  <p className="text-tailor-gray">Promenade Mall, Camps Bay, Cape Town</p>
+                  <p className="text-tailor-gray">South Africa.</p>
                 </div>
               </div>
             </div>

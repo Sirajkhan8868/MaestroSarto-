@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <a href="/" className="font-serif text-3xl font-bold tracking-tight">
-              TAILOR<span className="text-tailor-gold">ME</span>
+              Maestro<span className="text-tailor-gold"> Sarto</span>
             </a>
             <p className="text-gray-400 mt-4">
               Premium bespoke tailoring for the modern gentleman. Crafting excellence since 2005.
@@ -44,10 +44,10 @@ const Footer = () => {
               <li>Saturday: 10am - 4pm</li>
               <li>Sunday: Closed</li>
               <li className="pt-2">
-                <strong className="text-white">Email:</strong> info@tailorme.co.za
+                <strong className="text-white">Email:</strong> Maestrosarto79@gmail.com
               </li>
               <li>
-                <strong className="text-white">Phone:</strong> +27 21 123 4567
+                <strong className="text-white">Phone:</strong> 074 577 4777
               </li>
             </ul>
           </div>
@@ -57,7 +57,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} Tailor Me. All rights reserved.
+            &copy; {currentYear} Maestro Sarto. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-tailor-gold transition-colors">Privacy Policy</a>

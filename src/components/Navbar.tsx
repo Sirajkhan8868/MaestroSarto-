@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -14,9 +15,11 @@ const Navbar: React.FC = () => {
     <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
       <div className="container mx-auto py-5">
         <div className="flex items-center justify-between">
+
           <div className="flex items-center">
+
             <a href="/" className="font-serif text-2xl font-bold tracking-tight">
-              MAESTRO<span className="text-tailor-gold"> SARTO</span>
+              MAESTRO<span className="text-tailor-black"> SARTO</span>
             </a>
           </div>
 

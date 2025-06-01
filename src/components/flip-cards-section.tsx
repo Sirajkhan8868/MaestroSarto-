@@ -6,35 +6,35 @@ export default function FlipCardsSection() {
       title: "CONVENIENCE",
       description:
         "We give convenience for our customers to get their custom clothing done without stepping out from home.",
-      image: "/placeholder.svg?height=300&width=400&text=Home+Service",
+      image: "/convenience.webp?height=300&width=400&text=Convenience",
     },
     {
       title: "DESIGN YOUR OWN",
       description: "You can decide everything in detail on how you would like to finalize your perfect custom clothing",
-      image: "/placeholder.svg?height=300&width=400&text=Custom+Design",
+      image: "/design.webp?height=300&width=400&text=Design+Your+Own",
     },
     {
       title: "STYLIST ADVISE",
       description:
         "Our expert stylist will be happy to discuss your requirements in detail and recommend the best style, fabrics.",
-      image: "/placeholder.svg?height=300&width=400&text=Expert+Stylist",
+      image: "/stylist.webp?height=300&width=400&text=Stylist+Advise",
     },
     {
       title: "QUALITY FABRICS",
       description:
         "We can help you find the perfect fabric, We use for your clothing will ensure the comfort of wear and long life.",
-      image: "/placeholder.svg?height=300&width=400&text=Premium+Fabrics",
+      image: "/quality.webp?height=300&width=400&text=Quality+Fabrics",
     },
     {
       title: "PERSONAL TAILOR",
       description:
         "Your personal master tailor knows how to get the perfect cut for your clothes, which makes it perfect for you.",
-      image: "/placeholder.svg?height=300&width=400&text=Master+Tailor",
+      image: "/personal.webp?height=300&width=400&text=Personal+Tailor",
     },
     {
       title: "PERFECT FIT",
       description: "Never underestimate the power of a well tailored suit.",
-      image: "/placeholder.svg?height=300&width=400&text=Perfect+Fit",
+      image: "/perfect.webp?height=300&width=400&text=Perfect+Fit",
     },
   ]
 

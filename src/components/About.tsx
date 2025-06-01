@@ -6,9 +6,9 @@ const About = () => {
     <section id="about" className="section bg-white py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h6 className="text-center text-3xl font-semibold text-gray-800 mb-10 leading-snug">
+        <h6 className="text-center text-3xl font-medium text-gray-800 mb-10 leading-snug">
           FIND YOUR PERFECT FIT <br />
-          BESPOKE TAILORING IN DUBAI
+          BESPOKE TAILORING IN CAMPS BAY CAPE TOWN
         </h6>
 
         {/* Image Section */}
@@ -25,7 +25,7 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-xl font-semibold text-gray-800 my-5">Men Custom Suit</h1>
+              <h1 className="text-xl font-medium text-gray-800 my-5">MEN'S CUSTOM SUITS</h1>
             </div>
 
             {/* Right Image */}
@@ -37,7 +37,7 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-xl font-semibold text-gray-800 my-5">Woman Custom Suit</h1>
+              <h1 className="text-xl font-medium text-gray-800 my-5">WOMAN'S CUSTOM SUITS</h1>
             </div>
 
           </div>
