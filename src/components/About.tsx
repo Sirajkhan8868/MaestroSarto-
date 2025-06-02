@@ -6,10 +6,11 @@ const About = () => {
     <section id="about" className="section bg-white py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h6 className="text-center text-3xl font-medium text-gray-800 mb-10 leading-snug">
+        <h4 className="text-center text-xl md:text-3xl font-light text-black-700 mb-8 leading-tight tracking-wide">
           FIND YOUR PERFECT FIT <br />
           BESPOKE TAILORING IN CAMPS BAY CAPE TOWN
-        </h6>
+        </h4>
+
 
         {/* Image Section */}
         <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
@@ -25,8 +26,9 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-xl font-medium text-gray-800 my-5">MEN'S CUSTOM SUITS</h1>
-            </div>
+<h4 className="text-center text-xl md:text-3xl font-light text-black-700 mb-8 leading-tight my-8">
+          MEN'S CUSTOM SUITS
+        </h4>                                    </div>
 
             {/* Right Image */}
             <div className="text-center bg-gray-100">
@@ -37,8 +39,9 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-xl font-medium text-gray-800 my-5">WOMAN'S CUSTOM SUITS</h1>
-            </div>
+<h4 className="text-center text-xl md:text-2xl font-light text-black-700 mb-8 leading-tight  my-8">
+          WOMAN'S CUSTOM SUITS
+        </h4>                                    </div>
 
           </div>
 

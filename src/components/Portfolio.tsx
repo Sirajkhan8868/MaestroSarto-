@@ -13,11 +13,12 @@ const portfolioCategories = [
         imageSrc: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&q=80",
       },
       {
-        id: 2,
-        title: "Wedding Tuxedo",
-        description: "Black tie tuxedo with satin lapels",
-        imageSrc: "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&q=80",
+        id: 6,
+        title: "Casual Oxford",
+        description: "Light blue oxford button-down shirt",
+        imageSrc: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80",
       },
+     
       {
         id: 3,
         title: "Summer Linen",

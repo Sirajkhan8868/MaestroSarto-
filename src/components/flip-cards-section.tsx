@@ -74,8 +74,12 @@ export default function FlipCardsSection() {
       `}</style>
 
       <div className="min-h-screen bg-gray-50 py-16 px-4">
-        <h1 className="text-center mb-4 text-sm">WHY HOUSE OF TAILORS
-</h1>
+  <h1 className="text-center text-2xl md:text-3xl font-light tracking-wide text-gray-800 mb-2">
+    WHY HOUSE OF TAILORS
+  </h1>
+  <div className="w-24 h-[2px] bg-gray-400 mx-auto mb-10 rounded"></div>
+
+
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cards.map((card, index) => (

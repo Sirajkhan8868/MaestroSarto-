@@ -1,71 +1,62 @@
-
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+import down from "../assets/images/down.png";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
-      <div className="container mx-auto py-5">
+    <header className="fixed w-full bg-grey/95 backdrop-blur-sm z-50 shadow-sm">
+      <div className="container mx-auto py-4 px-4">
         <div className="flex items-center justify-between">
 
-          <div className="flex items-center">
+          {/* Logo + Brand */}
+          <div className="flex items-center space-x-1">
+           <img
+  src={down}
+  alt="Maestro Sarto Logo"
+  className="h-20 w-auto filter invert brightness-200"
+/>
 
-            <a href="/" className="font-serif text-2xl font-bold tracking-tight">
+            <a href="/" className="font-serif text-2xl font-bold tracking-tight text-white">
               MAESTRO<span className="text-tailor-black"> SARTO</span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#home" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              HOME
-            </a>
-            <a href="#about" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              ABOUT
-            </a>
-            <a href="#services" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              SERVICES
-            </a>
-            <a href="#portfolio" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              PORTFOLIO
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              CONTACT
-            </a>
-            <Button 
-              className="bg-tailor-dark hover:bg-black text-white px-6"
-              size="sm"
-            >
+            {["home", "about", "services", "portfolio", "contact"].map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className="text-sm font-medium text-white hover:text-tailor-gold transition-colors"
+              >
+                {section.toUpperCase()}
+              </a>
+            ))}
+            <Button className="bg-tailor-dark hover:bg-black text-white px-6" size="sm">
               BOOK APPOINTMENT
             </Button>
           </nav>
 
-          {/* Medium Device Navigation */}
+          {/* Medium Navigation */}
           <nav className="hidden md:flex lg:hidden items-center space-x-5">
-            <a href="#home" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              HOME
-            </a>
-            <a href="#about" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              ABOUT
-            </a>
-            <a href="#services" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              SERVICES
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-tailor-gold transition-colors">
-              CONTACT
-            </a>
+            {["home", "about", "services", "contact"].map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className="text-sm font-medium text-white hover:text-tailor-gold transition-colors"
+              >
+                {section.toUpperCase()}
+              </a>
+            ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button 
+          {/* Mobile Menu Toggle */}
+          <button
             className="lg:hidden text-tailor-dark p-2"
             onClick={toggleMenu}
             aria-label="Toggle menu"
@@ -78,43 +69,18 @@ const Navbar: React.FC = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
-          <div className="container py-4 flex flex-col space-y-4">
-            <a 
-              href="#home" 
-              className="text-sm font-medium py-2 hover:text-tailor-gold transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              HOME
-            </a>
-            <a 
-              href="#about" 
-              className="text-sm font-medium py-2 hover:text-tailor-gold transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              ABOUT
-            </a>
-            <a 
-              href="#services" 
-              className="text-sm font-medium py-2 hover:text-tailor-gold transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              SERVICES
-            </a>
-            <a 
-              href="#portfolio" 
-              className="text-sm font-medium py-2 hover:text-tailor-gold transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              PORTFOLIO
-            </a>
-            <a 
-              href="#contact" 
-              className="text-sm font-medium py-2 hover:text-tailor-gold transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              CONTACT
-            </a>
-            <Button 
+          <div className="container py-4 flex flex-col space-y-4 px-4">
+            {["home", "about", "services", "portfolio", "contact"].map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className="text-sm font-medium py-2 text-tailor-dark hover:text-tailor-gold transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {section.toUpperCase()}
+              </a>
+            ))}
+            <Button
               className="bg-tailor-dark hover:bg-black text-white w-full mt-4"
               size="sm"
             >
