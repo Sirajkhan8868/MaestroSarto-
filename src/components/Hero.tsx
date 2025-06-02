@@ -51,7 +51,7 @@ const Hero = () => {
       </div>
 
       {/* Launching Soon Badge with Glow */}
-      <div className="absolute bottom-10 right-4 z-20 bg-black/70 text-white px-4 py-2 text-sm rounded-lg shadow-md backdrop-blur-sm animate-glow">
+      <div className="absolute bottom-5 right-4 z-20 bg-black/70 text-white px-4 py-2 text-sm rounded-lg shadow-md backdrop-blur-sm animate-glow">
         LAUNCHING SOON
       </div>
     </section>
