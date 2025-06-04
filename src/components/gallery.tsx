@@ -1,7 +1,6 @@
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const portfolioCategories = [
+const galleryCategories = [
   {
     id: "suits",
     label: "Suits",
@@ -18,7 +17,6 @@ const portfolioCategories = [
         description: "Light blue oxford button-down shirt",
         imageSrc: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80",
       },
-     
       {
         id: 3,
         title: "Summer Linen",
@@ -95,12 +93,14 @@ const portfolioCategories = [
   },
 ];
 
-const Portfolio = () => {
+const Gallery = () => {
   return (
-    <section id="portfolio" className="section bg-white">
+    <section id="gallery" className="section bg-white">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title">Our <span className="text-tailor-gold">Portfolio</span></h2>
+          <h2 className="section-title">
+            Our <span className="text-tailor-black">Gallery</span>
+          </h2>
           <p className="section-subtitle">
             Browse through our collection of handcrafted garments. Each piece represents our commitment to quality craftsmanship and attention to detail.
           </p>
@@ -109,9 +109,9 @@ const Portfolio = () => {
         <Tabs defaultValue="suits" className="w-full">
           <div className="flex justify-center mb-10">
             <TabsList className="bg-tailor-light">
-              {portfolioCategories.map((category) => (
-                <TabsTrigger 
-                  key={category.id} 
+              {galleryCategories.map((category) => (
+                <TabsTrigger
+                  key={category.id}
                   value={category.id}
                   className="px-6 py-3 data-[state=active]:bg-tailor-dark data-[state=active]:text-white"
                 >
@@ -120,16 +120,19 @@ const Portfolio = () => {
               ))}
             </TabsList>
           </div>
-          
-          {portfolioCategories.map((category) => (
+
+          {galleryCategories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {category.items.map((item) => (
-                  <div key={item.id} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                  <div
+                    key={item.id}
+                    className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  >
                     <div className="aspect-square overflow-hidden">
-                      <img 
-                        src={item.imageSrc} 
-                        alt={item.title} 
+                      <img
+                        src={item.imageSrc}
+                        alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
@@ -150,4 +153,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Gallery;

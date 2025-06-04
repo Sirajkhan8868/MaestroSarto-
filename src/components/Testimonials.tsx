@@ -23,7 +23,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="section bg-tailor-dark text-white">
-      <div className="container mx-auto">
+      <div className="">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title">Client <span className="text-tailor-gold">Testimonials</span></h2>
           <p className="text-gray-300 text-lg">

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-16 bg-tailor-dark overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-tailor-dark overflow-hidden"
     >
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
@@ -22,16 +22,17 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/60 z-10" />
       </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 py-20 text-white relative z-20">
-        <div className="max-w-3xl animate-fade-in mt-8">
-          <h1 className="text-5xl mb-2">Maestro Sarto</h1>
-          <p className="text-1xl md:text-1xl font-light text-left text-white-100 mb-6 tracking-[0.1rem]">
+      {/* Content Centered */}
+      <div className="container mx-auto px-4 text-white relative z-20 flex flex-col items-center justify-center text-center">
+        <div className="max-w-3xl animate-fade-in">
+          <h1 className="text-5xl mb-4">Maestro Sarto</h1>
+          <p className="text-lg md:text-xl font-light text-white-100 mb-6 tracking-[0.1rem]">
             <span className="text-tailor-white">
-              Offers bespoke, made-to-measure, and ready-to-wear garments crafted with precision tailoring and exquisite fabrics. Our master artisans ensure an impeccable fit and personalized details, elevating your presence with timeless sophistication.
-            </span>
+              Nestled at the heart in camps bay,
+              Impacable journey a remarkable epitome leading a brand new studio.
+              At your service            </span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-5">
+          <div className="flex flex-col sm:flex-row gap-4 mt-5 justify-center">
             <Button className="bg-black hover:bg-gray-800 text-white font-medium px-8 py-6">
               EXPLORE OUR SERVICES
             </Button>

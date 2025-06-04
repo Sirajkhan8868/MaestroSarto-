@@ -4,21 +4,21 @@ import mensuit from "../assets/images/mensuit.jpg";
 
 export default function TailoredsuitCollection() {
   return (
-    <div className="min-h-screen bg-white py-16 px-4">
+<section id="tailoredsuit" className="tailoredsuit min-h-screen bg-white py-16 px-4">
       {/* Header Section */}
-      <div className="text-center max-w-15xl mx-auto px-4">
+      <div className="text-center max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-2xl font-medium mb-6 text-gray-900">
           TAILORED SUITS IN CAMPS BAY CAPE TOWN FOR ALL OCCASIONS
         </h2>
-        <p className="">
+        <p className="max-w-18xl mx-auto text-gray-700 leading-relaxed">
           Bespoke suits for every occasion. At Maestro Sarto, we specialize in creating custom made suits that are
-          tailored to your unique style and preferences. Our tailoring experts <br></br> can help you create the perfect look for
+          tailored to your unique style and preferences. Our tailoring <br />experts  can help you create the perfect look for
           your wedding and special event. Experience the art of bespoke tailoring at Maestro Sarto.
         </p>
       </div>
 
       {/* First Row of Images */}
-      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 px-4">
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 px-4 max-w-7xl mx-auto">
         <img
           src={wedding}
           alt="Wedding Suit"
@@ -32,7 +32,7 @@ export default function TailoredsuitCollection() {
       </div>
 
       {/* Quote Text */}
-      <div className="text-center mt-16 px-4">
+      <div className="text-center mt-16 px-4 max-w-7xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-normal text-gray-600 mb-8">
           Beautifully crafted suits for the ultimate wardrobe.
         </h3>
@@ -46,6 +46,6 @@ export default function TailoredsuitCollection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

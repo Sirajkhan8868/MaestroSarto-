@@ -1,38 +1,73 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import down from "../assets/images/down.png";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [navOnWhite, setNavOnWhite] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  return (
-    <header className="fixed w-full bg-grey/95 backdrop-blur-sm z-50 shadow-sm">
-      <div className="container mx-auto py-4 px-4">
-        <div className="flex items-center justify-between">
+  useEffect(() => {
+    const handleScroll = () => {
+      const whiteSections = [
+        "about",
+        "services",
+        "gallery", // changed from "portfolio"
+        "customer",
+        "contact",
+        "fabric-collection",
+        "flip-cards-section",
+        "tailoredsuit",
+        "testimonials",
+      ];
 
+      const isAnyWhiteVisible = whiteSections.some((id) => {
+        const el = document.getElementById(id);
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return rect.top <= 80 && rect.bottom >= 80;
+      });
+
+      setNavOnWhite(isAnyWhiteVisible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial check
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed w-full z-20 shadow-sm transition-all duration-300 ${
+        navOnWhite ? "bg-black text-white" : "bg-grey/95 text-white"
+      }`}
+    >
+      <div className="container mx-auto py-2 px-2">
+        <div className="flex items-center justify-between">
           {/* Logo + Brand */}
           <div className="flex items-center space-x-1">
-           <img
-  src={down}
-  alt="Maestro Sarto Logo"
-  className="h-20 w-auto filter invert brightness-200"
-/>
-
-            <a href="/" className="font-serif text-2xl font-bold tracking-tight text-white">
+            <img
+              src={down}
+              alt="Maestro Sarto Logo"
+              className="h-20 w-auto filter invert brightness-100"
+            />
+            <a
+              href="/"
+              className="font-serif text-2xl font-bold tracking-tight text-white"
+            >
               MAESTRO<span className="text-tailor-black"> SARTO</span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {["home", "about", "services", "portfolio", "contact"].map((section) => (
+            {["home", "about", "services", "gallery", "contact"].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
-                className="text-sm font-medium text-white hover:text-tailor-gold transition-colors"
+                className="text-sm font-medium hover:text-tailor-gold transition-colors"
               >
                 {section.toUpperCase()}
               </a>
@@ -48,16 +83,16 @@ const Navbar: React.FC = () => {
               <a
                 key={section}
                 href={`#${section}`}
-                className="text-sm font-medium text-white hover:text-tailor-gold transition-colors"
+                className="text-sm font-medium hover:text-tailor-gold transition-colors"
               >
                 {section.toUpperCase()}
               </a>
             ))}
           </nav>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Toggle Button */}
           <button
-            className="lg:hidden text-tailor-dark p-2"
+            className="lg:hidden text-white p-2"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -70,7 +105,17 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container py-4 flex flex-col space-y-4 px-4">
-            {["home", "about", "services", "portfolio", "contact"].map((section) => (
+            {[
+              "about",
+              "services",
+              "customer",
+              "gallery", // changed from "portfolio"
+              "contact",
+              "fabric-collection",
+              "flip-cards-section",
+              "tailoredsuit",
+              "testimonials",
+            ].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
