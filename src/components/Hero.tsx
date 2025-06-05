@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Background from "../assets/videos/Background.mp4";
+import Tailor from "../assets/videos/Tailor.mp4";
 
 const Hero = () => {
   return (
@@ -16,7 +16,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover scale-[1.5]"
         >
-          <source src={Background} type="video/mp4" />
+          <source src={Tailor} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/60 z-10" />
