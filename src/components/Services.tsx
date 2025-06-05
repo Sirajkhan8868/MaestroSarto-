@@ -4,69 +4,52 @@ import virtual from "../assets/images/virtual.jpg";
 
 const Service = () => {
   return (
-    <section id="services" className="section bg-white py-6">
-      {/* Removed container div */}
-      
-      {/* Heading */}
-      <div className="text-center">
-        <h6 className="text-2xl md:text-3xl font-light text-gray-900 mb-10 leading-snug">
-          AT YOUR SERVICE EVERYDAY
-        </h6>
-      </div>
+    <section id="services" className="bg-white py-10">
+      <div className="container mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h6 className="text-2xl md:text-3xl font-light text-gray-900 leading-snug">
+            AT YOUR SERVICE EVERYDAY
+          </h6>
+        </div>
 
-      {/* Image Section */}
-      <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 py-8 rounded-md">
-          {/* Card 1 */}
-          <div className="text-center bg-gray-100">
-            <div className="relative w-[300px] sm:w-[500px] md:w-[490px] h-[500px] rounded-lg overflow-hidden shadow-md mx-auto">
-              <img
-                src={showroom}
-                alt="Tailor measuring a client"
-                className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <h1 className="text-xl font-light text-gray-800 my-5">
-              VISIT OUR DESIGN STUDIO IN DUBAI
-            </h1>
-            <button className="bg-black text-white mb-5 text-gray-800 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
-              Book Now
-            </button>
-          </div>
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Card Template */}
+          {[{
+            img: showroom,
+            title: "VISIT OUR DESIGN MAESTRO SARTO"
+          }, {
+            img: fashion,
+            title: "BOOK A HOME VISIT WITH OUR STYLIST"
+          }, {
+            img: virtual,
+            title: "BOOK A VIRTUAL APPOINTMENT"
+          }].map((card, index) => (
+            <div
+              key={index}
+              className="bg-gray-100 rounded-lg shadow-md overflow-hidden flex flex-col"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="w-full h-64 md:h-80 object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="p-4 text-center flex flex-col flex-grow">
+                <h1 className="text-lg font-light text-gray-800 mb-3">
+                  {card.title}
+                </h1>
+                <button
+                  className="bg-black text-white text-sm font-medium h-10 w-28 rounded hover:bg-gray-900 transition mx-auto"
+                >
+                  Book Now
+                </button>
 
-          {/* Card 2 */}
-          <div className="text-center bg-gray-100">
-            <div className="relative w-[300px] sm:w-[500px] md:w-[490px] h-[500px] rounded-lg overflow-hidden shadow-md mx-auto">
-              <img
-                src={fashion}
-                alt="Home stylist visit"
-                className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
-              />
+              </div>
             </div>
-            <h1 className="text-xl font-light text-gray-800 my-5">
-              BOOK A HOME VISIT WITH OUR STYLIST
-            </h1>
-            <button className="bg-black text-white mb-5 text-gray-800 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
-              Book Now
-            </button>
-          </div>
-
-          {/* Card 3 */}
-          <div className="text-center bg-gray-100">
-            <div className="relative w-[300px] sm:w-[500px] md:w-[490px] h-[500px] rounded-lg overflow-hidden shadow-md mx-auto">
-              <img
-                src={virtual}
-                alt="Virtual appointment"
-                className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <h1 className="text-xl font-light text-gray-800 my-5">
-              BOOK A VIRTUAL APPOINTMENT
-            </h1>
-            <button className="bg-black text-white mb-5 text-normal py-2 px-6 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
-              Book Now
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </section>

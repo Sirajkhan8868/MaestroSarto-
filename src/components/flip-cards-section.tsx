@@ -72,47 +72,47 @@ export default function FlipCardsSection() {
       `}</style>
 
       <section id="flip-cards-section" className="section bg-white py-12 md:py-16">
-  <div className="px-4"> {/* simple padding only, no container */}
-    {/* Heading */}
-    <div className="text-center mb-10">
-      <h1 className="text-3xl md:text-4xl font-light text-gray-900 tracking-wide">
-        WHY HOUSE OF TAILORS
-      </h1>
-      <div className="w-24 h-[2px] bg-gray-400 mx-auto mt-4 rounded"></div>
-    </div>
+        <div className="px-4"> {/* simple padding only, no container */}
+          {/* Heading */}
+          <div className="text-center mb-10">
+            <h1 className="text-3xl md:text-4xl font-light text-gray-900 tracking-wide">
+              WHY Maestro Sarto
+            </h1>
+            <div className="w-24 h-[2px] bg-gray-400 mx-auto mt-4 rounded"></div>
+          </div>
 
-    {/* Cards Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {cards.map((card, index) => (
-        <div
-          key={index}
-          className="group perspective-1000 h-64 rounded-lg shadow-lg overflow-hidden"
-        >
-          <div className="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 rounded-lg">
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                className="group perspective-1000 h-64 rounded-lg shadow-lg overflow-hidden"
+              >
+                <div className="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 rounded-lg">
 
-            {/* Front Side - IMAGE */}
-            <div className="absolute inset-0 w-full h-full backface-hidden rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={card.image || "/placeholder.svg"}
-                alt={card.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
-                <h3 className="text-white text-2xl font-semibold tracking-wide">{card.title}</h3>
+                  {/* Front Side - IMAGE */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src={card.image || "/placeholder.svg"}
+                      alt={card.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
+                      <h3 className="text-white text-2xl font-semibold tracking-wide">{card.title}</h3>
+                    </div>
+                  </div>
+
+                  {/* Back Side - TEXT */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gray-100 rounded-lg p-8 flex flex-col justify-center items-center text-center shadow-lg">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4 tracking-wide">{card.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{card.description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            {/* Back Side - TEXT */}
-            <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gray-100 rounded-lg p-8 flex flex-col justify-center items-center text-center shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 tracking-wide">{card.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{card.description}</p>
-            </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
     </>
   );

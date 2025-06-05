@@ -1,4 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import suit1 from "../assets/images/suit1.webp";
 
 const galleryCategories = [
   {
@@ -7,34 +8,41 @@ const galleryCategories = [
     items: [
       {
         id: 1,
-        title: "Business Suit",
-        description: "Classic navy business suit with peak lapels",
-        imageSrc: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&q=80",
-      },
-      {
-        id: 6,
-        title: "Casual Oxford",
-        description: "Light blue oxford button-down shirt",
-        imageSrc: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80",
-      },
-      {
-        id: 3,
         title: "Summer Linen",
-        description: "Light beige linen suit for warm weather",
-        imageSrc: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&q=80",
+        description: "Custom gray plaid blazer with pinstriped dress shirt and solid navy tie",
+        imageSrc: "https://images.unsplash.com/photo-1594938350684-4c251b5030d1?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 2,
+        title: "Versatile Charcoal Three-Piece Suit",
+        description: "Versatile charcoal three-piece suit",
+        imageSrc: "https://images.unsplash.com/photo-1593030089683-a9841767a610?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+       {
+        id: 3,
+        title: "Sharp Blue Three-Piece Suit",
+        description: "Custom blue blazer, pinstripe slacks, and a striking red tie.",
+        imageSrc: "https://images.unsplash.com/photo-1592878863518-0357779ebc6a?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         id: 4,
-        title: "Charcoal Three-Piece",
-        description: "Versatile charcoal three-piece suit",
-        imageSrc: "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&q=80",
+        title: "Bold Blue Suit Look",
+        description: "Custom mid-blue suit with double-breasted waistcoat and yellow tie.",
+        imageSrc: "https://images.unsplash.com/photo-1593030821647-0c9c4a845da3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
+     
     ],
   },
   {
     id: "shirts",
     label: "Shirts",
     items: [
+        {
+        id: 1,
+        title: "Business Suit",
+        description: "Classic navy business suit with peak lapels",
+        imageSrc: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&q=80",
+      },
       {
         id: 5,
         title: "Business White",
@@ -47,12 +55,7 @@ const galleryCategories = [
         description: "Light blue oxford button-down shirt",
         imageSrc: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80",
       },
-      {
-        id: 7,
-        title: "Evening Shirt",
-        description: "Formal pleated front shirt for black tie events",
-        imageSrc: "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?auto=format&fit=crop&q=80",
-      },
+     
       {
         id: 8,
         title: "Patterned Shirt",
