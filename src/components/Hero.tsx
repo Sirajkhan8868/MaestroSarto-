@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-tailor-dark overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-tailor-dark overflow-hidden pt-[4.5rem]"
     >
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
@@ -22,21 +22,20 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/60 z-10" />
       </div>
 
-      {/* Content Centered */}
+      {/* Centered Content */}
       <div className="container mx-auto px-4 text-white relative z-20 flex flex-col items-center justify-center text-center">
         <div className="max-w-3xl animate-fade-in">
-          <h1 className="text-5xl mb-4">Maestro Sarto</h1>
-          <p className="text-lg md:text-xl font-light text-white-100 mb-6 tracking-[0.1rem]">
-            <span className="text-tailor-white">
-              Nestled at the heart in camps bay,
-              Impacable journey a remarkable epitome leading a brand new studio.
-              At your service            </span>
+          <h1 className="text-5xl mb-4 font-serif">Maestro Sarto</h1>
+          <p className="text-lg md:text-xl font-light mb-6 tracking-[0.1rem] leading-relaxed text-tailor-white">
+            Nestled at the heart in Camps Bay, impeccable journey a remarkable epitome leading a brand-new studio.
+            At your service.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-5 justify-center">
-            <Button className="bg-black hover:bg-gray-800 text-white font-medium px-8 py-6">
-              EXPLORE OUR SERVICES
-            </Button>
-          </div>
+         <div className="flex flex-col sm:flex-row gap-4 mt-5 justify-center">
+  <Button className="bg-transparent border border-white hover:bg-gray-800 text-white font-medium px-8 py-6 transition-colors duration-300">
+    EXPLORE OUR SERVICES
+  </Button>
+</div>
+
         </div>
       </div>
 
@@ -51,9 +50,13 @@ const Hero = () => {
         </a>
       </div>
 
-      {/* Launching Soon Badge with Glow */}
-      <div className="absolute bottom-5 right-4 z-20 bg-black/70 text-white px-4 py-2 text-sm rounded-lg shadow-md backdrop-blur-sm animate-glow">
-        LAUNCHING SOON
+      {/* Moving Launching Soon Badge */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden z-20">
+        <div className="whitespace-nowrap animate-marquee flex items-center">
+          <span className="inline-block bg-black/70 text-white px-4 py-2 text-sm rounded-lg shadow-lg shadow-white/20 backdrop-blur-sm mx-2 animate-glow">
+            LAUNCHING SOON
+          </span>
+        </div>
       </div>
     </section>
   );

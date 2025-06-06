@@ -100,12 +100,19 @@ export default {
             boxShadow: "0 0 10px #fff, 0 0 20px #D4AF37, 0 0 30px #D4AF37",
           },
         },
+        // ✅ New marquee keyframe
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.8s ease-out",
         glow: "glow 2s ease-in-out infinite",
+        // ✅ New marquee animation
+        marquee: "marquee 20s linear infinite",
       },
     },
   },

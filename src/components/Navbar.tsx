@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
       const whiteSections = [
         "about",
         "services",
-        "gallery", // changed from "portfolio"
+        "gallery",
         "customer",
         "contact",
         "fabric-collection",
@@ -38,78 +38,97 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Disable body scroll on mobile/medium screens when menu is open
+  useEffect(() => {
+    const handleResizeOrOpen = () => {
+      const isLgOrBelow = window.innerWidth < 1024; // lg breakpoint (1024px)
+      if (isMenuOpen && isLgOrBelow) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    };
+
+    handleResizeOrOpen();
+
+    window.addEventListener("resize", handleResizeOrOpen);
+    return () => {
+      window.removeEventListener("resize", handleResizeOrOpen);
+      document.body.style.overflow = ""; // cleanup on unmount
+    };
+  }, [isMenuOpen]);
+
   return (
     <header
-      className={`fixed w-full z-20 shadow-sm transition-all duration-300 ${
-        navOnWhite ? "bg-black text-white" : "bg-grey/95 text-white"
+      className={`fixed w-full z-30 shadow-sm transition-all duration-300 ${
+        navOnWhite ? "bg-black text-white" : "bg-gray-95% text-white"
       }`}
     >
-      <div className="container mx-auto py-2 px-2">
-        <div className="flex items-center justify-between">
-          {/* Logo + Brand */}
-          <div className="flex items-center space-x-1">
-            <img
-              src={down}
-              alt="Maestro Sarto Logo"
-              className="h-20 w-auto filter invert brightness-100"
-            />
-            <a
-              href="/"
-              className="font-serif text-2xl font-bold tracking-tight text-white"
-            >
-              MAESTRO<span className="text-tailor-black"> SARTO</span>
-            </a>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {["home", "about", "services", "gallery", "contact"].map((section) => (
-              <a
-                key={section}
-                href={`#${section}`}
-                className="text-sm font-medium hover:text-tailor-gold transition-colors"
-              >
-                {section.toUpperCase()}
-              </a>
-            ))}
-            <Button className="bg-tailor-dark hover:bg-black text-white px-6" size="sm">
-              BOOK APPOINTMENT
-            </Button>
-          </nav>
-
-          {/* Medium Navigation */}
-          <nav className="hidden md:flex lg:hidden items-center space-x-5">
-            {["home", "about", "services", "contact"].map((section) => (
-              <a
-                key={section}
-                href={`#${section}`}
-                className="text-sm font-medium hover:text-tailor-gold transition-colors"
-              >
-                {section.toUpperCase()}
-              </a>
-            ))}
-          </nav>
-
-          {/* Mobile Toggle Button */}
-          <button
-            className="lg:hidden text-white p-2"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
+      <div className="container mx-auto py-2 px-2 flex items-center justify-between">
+        {/* Logo + Brand */}
+        <div className="flex items-center space-x-1">
+          <img
+            src={down}
+            alt="Maestro Sarto Logo"
+            className="h-16 sm:h-20 w-auto filter invert brightness-100"
+          />
+          <a
+            href="/"
+            className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            MAESTRO<span className="text-tailor-black"> SARTO</span>
+          </a>
         </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center space-x-8">
+          {["home", "about", "services", "gallery", "contact"].map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className="text-sm font-medium hover:text-tailor-gold transition-colors"
+            >
+              {section.toUpperCase()}
+            </a>
+          ))}
+          <Button className="bg-tailor-dark hover:bg-black text-white px-6" size="sm">
+            BOOK APPOINTMENT
+          </Button>
+        </nav>
+
+        {/* Medium Navigation */}
+        <nav className="hidden md:flex lg:hidden items-center space-x-5">
+          {["home", "about", "services", "contact"].map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className="text-sm font-medium hover:text-tailor-gold transition-colors"
+            >
+              {section.toUpperCase()}
+            </a>
+          ))}
+        </nav>
+
+        {/* Mobile Toggle Button */}
+        <button
+          className="lg:hidden text-white p-2"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="container py-4 flex flex-col space-y-4 px-4">
+        <div className="md:hidden bg-white border-t fixed top-[calc(4.5rem)] left-0 w-full z-40 overflow-y-auto max-h-[calc(100vh-4.5rem)]">
+          <div className="container py-6 flex flex-col space-y-4 px-4">
             {[
               "about",
               "services",
               "customer",
-              "gallery", // changed from "portfolio"
+              "gallery",
               "contact",
               "fabric-collection",
               "flip-cards-section",

@@ -64,36 +64,36 @@ const galleryCategories = [
       },
     ],
   },
-  {
-    id: "accessories",
-    label: "Accessories",
-    items: [
-      {
-        id: 9,
-        title: "Silk Ties",
-        description: "Collection of premium silk ties",
-        imageSrc: "https://images.unsplash.com/photo-1598812761095-207fa371baff?auto=format&fit=crop&q=80",
-      },
-      {
-        id: 10,
-        title: "Pocket Squares",
-        description: "Handcrafted pocket squares in various patterns",
-        imageSrc: "https://images.unsplash.com/photo-1629736048693-6bc25970ac36?auto=format&fit=crop&q=80",
-      },
-      {
-        id: 11,
-        title: "Cufflinks",
-        description: "Sterling silver and gold-plated cufflinks",
-        imageSrc: "https://images.unsplash.com/photo-1593976890064-c87053c3626e?auto=format&fit=crop&q=80",
-      },
-      {
-        id: 12,
-        title: "Belts",
-        description: "Full-grain leather belts with brass buckles",
-        imageSrc: "https://images.unsplash.com/photo-1605078210579-20a75952bd1e?auto=format&fit=crop&q=80",
-      },
-    ],
-  },
+ {
+  id: "accessories",
+  label: "Accessories",
+  items: [
+    {
+      id: 9,
+      title: "Silk Ties",
+      description: "Elegant silk ties in various colors and patterns, perfect for formal occasions.",
+      imageSrc: "https://images.unsplash.com/photo-1577593641419-f2522bec16e5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 10,
+      title: "Pocket Squares",
+      description: "Handcrafted pocket squares with intricate designs to complement your style.",
+      imageSrc: "https://images.unsplash.com/photo-1629736048693-6bc25970ac36?auto=format&fit=crop&q=80",
+    },
+    {
+      id: 11,
+      title: "Cufflinks",
+      description: "Sophisticated sterling silver and gold-plated cufflinks for a polished look.",
+      imageSrc: "https://images.unsplash.com/photo-1582327530547-e8037399bdbf?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      id: 12,
+      title: "Belts",
+      description: "Durable full-grain leather belts with classic brass buckles for everyday wear.",
+      imageSrc: "https://images.unsplash.com/photo-1627821644229-9681183f045a?q=80&w=1615&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ],
+}
 ];
 
 const Gallery = () => {

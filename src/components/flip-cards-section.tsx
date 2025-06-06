@@ -85,14 +85,17 @@ export default function FlipCardsSection() {
                 <div className="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 rounded-lg">
 
                   {/* Front Side */}
-                  <div className="absolute inset-0 w-full h-full backface-hidden rounded-lg overflow-hidden shadow-lg">
+                  <div className="absolute inset-0 w-full h-full backface-hidden rounded-lg overflow-hidden shadow-lg relative">
                     <img
                       src={card.image || "/placeholder.svg"}
                       alt={card.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
-                      <h3 className="text-white text-2xl font-semibold tracking-wide text-center px-2">{card.title}</h3>
+                    {/* Overlay on hover */}
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 className="text-white text-2xl font-semibold tracking-wide text-center px-4">
+                        {card.title}
+                      </h3>
                     </div>
                   </div>
 

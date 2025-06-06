@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Services from '@/components/Services';
-import Testimonials from '@/components/Testimonials';
+// import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FlipCardsSection from '@/components/flip-cards-section';
@@ -25,7 +25,7 @@ const Index = () => {
       <FabricCollection />
       <FlipCardsSection />
       <TailoredsuitCollection />
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       <Contact />
       <Footer />
