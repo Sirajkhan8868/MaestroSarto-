@@ -30,11 +30,11 @@ const Hero = () => {
             Nestled at the heart in Camps Bay, impeccable journey a remarkable epitome leading a brand-new studio.
             At your service.
           </p>
-         <div className="flex flex-col sm:flex-row gap-4 mt-5 justify-center">
-  <Button className="bg-transparent border border-white hover:bg-gray-800 text-white font-medium px-8 py-6 transition-colors duration-300">
-    EXPLORE OUR SERVICES
-  </Button>
-</div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-5 justify-center">
+            <Button className="bg-transparent border border-white hover:bg-gray-800 text-white font-medium px-8 py-6 transition-colors duration-300">
+              EXPLORE OUR SERVICES
+            </Button>
+          </div>
 
         </div>
       </div>
