@@ -26,8 +26,7 @@ const Hero = () => {
         <div className="max-w-3xl animate-fade-in">
           <h1 className="text-5xl mb-4 font-serif">Maestro Sarto</h1>
           <p className="text-lg md:text-xl font-light mb-6 tracking-[0.1rem] leading-relaxed text-tailor-white">
-            Nestled at the heart in Camps Bay, impeccable journey a remarkable epitome leading a brand-new studio.
-            At your service.
+            Welcome to our boutique tailoring studio nestled in the heart of Camps Bay, Cape Town - where the beauty of the ocean meets timeless style. We specialise in bespoke and made-to-measure suits, crafted with precision and care to reflect your unique personality and fit. From expert alterations to one-of-a-kind garments, every piece is tailored to perfection - because you deserve nothing less than excellence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-5 justify-center">
             <Button className="bg-transparent border border-white hover:bg-gray-800 text-white font-medium px-8 py-6 transition-colors duration-300">
